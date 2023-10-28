@@ -1,0 +1,52 @@
+/* body */
+.body {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.search input {
+  width: 1000px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  border: #ffffff solid 0.5px;
+  color: var(--background);
+  margin-top: 20px;
+}
+
+.search > input,
+.body > .line {
+  width: 100%;
+}
+
+.recent-search {
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.recent-words li {
+  float: left;
+  margin-left: 8px;
+}
+
+.popular-search {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.popular-search li {
+  margin-top: 5px;
+}
+.line {
+  margin-top: 30px;
+  width: 100%;
+  border: 0.1px solid #ffffff;
+}
+
+.advertising-banner img {
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}

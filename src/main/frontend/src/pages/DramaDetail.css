@@ -1,0 +1,208 @@
+.detail {
+  width: 1440px;
+  margin: 0 auto; /* 가로 가운데 정렬을 위해 margin 속성 활용 */
+  padding-top: 2%;
+}
+.description {
+  display: flex; /* 부모 요소를 플렉스 박스로 설정 */
+  align-items: flex-start; /* 아이템을 상단으로 정렬 */
+}
+
+.left-column {
+  flex: 1; /* 좌측 열이 남은 공간을 모두 차지하도록 설정 */
+  padding: 10px; /* 원하는 간격을 설정할 수 있습니다 */
+  padding: 3%;
+  padding-right: 5%;
+}
+
+.right-column {
+  flex: 0.8; /* 우측 열은 고정 너비를 가지므로 flex 값이 0입니다. */
+  margin-left: 10px; /* 좌측 열과의 간격을 설정할 수 있습니다 */
+}
+
+/* 선택적으로 스타일을 추가할 수 있습니다 */
+.name {
+  font-size: 43px;
+  font-weight: bold;
+}
+
+.overview {
+  padding-top: 5%;
+  font-size: 23px;
+  font-weight: 100;
+}
+
+.popular {
+  padding-top: 5%;
+  font-size: 16px;
+  color: rgba(189, 178, 178, 0.64);
+}
+
+.Dbox1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  padding-top: 2%;
+}
+
+.date1 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+}
+
+.date2 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+  color: grey;
+}
+
+.adult1 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+}
+.adult2 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+  color: grey;
+}
+.Dbox4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+  padding-top: 2%;
+}
+
+.Dbox2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95px;
+  padding-top: 2%;
+}
+
+.number1 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+}
+
+.number2 {
+  /* 필요한 스타일을 추가할 수 있습니다. */
+  font-size: 18px;
+  color: grey;
+}
+
+.total-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-box {
+  flex: 1;
+}
+.right-box {
+  flex: 1;
+}
+
+.Dbox3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  padding-top: 2%;
+}
+
+.generes1 {
+  font-size: 18px;
+}
+
+.networks {
+  padding-top: 4%;
+}
+.networks > h2 {
+  margin-bottom: 20px;
+}
+
+.network-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.network-item {
+  position: relative;
+  width: 220px; /* Set a fixed width for even spacing */
+  text-align: center;
+  height: 130px; /* Set a fixed height to ensure consistent item height */
+}
+.network-item img {
+  width: 100%;
+}
+
+.network-name {
+  position: absolute;
+  bottom: 5px; /* Adjust this value to control the vertical position */
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* Ensure the image takes up the remaining space at the top of the item */
+.img {
+  width: 100%; /* Make sure the image takes the full width of the item */
+  height: auto; /* Allow the height to adjust proportionally */
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.created {
+  padding-left: 3%;
+  padding-top: 5%;
+}
+.actor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.actor-row {
+  display: flex;
+  gap: 40px;
+}
+
+.actor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.actor {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.actor-item img {
+  max-width: 100%;
+}
+.actor-name {
+  font-size: 20px; /* 원하는 폰트 크기로 조정하세요 */
+}
+.video-text {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.videos {
+  padding-top: 5%;
+  padding-left: 3%;
+  margin-bottom: 40px;
+}
+
+.videos > ul > iframe {
+  margin-right: 20px;
+}

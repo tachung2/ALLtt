@@ -1,0 +1,93 @@
+/* body */
+.body {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* community */
+.tcommunity {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.box {
+}
+
+.box1 {
+  width: 800px;
+  height: 650px;
+  background-color: #616161;
+  border-radius: 30px;
+}
+.box1-content {
+  background-color: #00ff0000;
+  margin-left: 20px;
+}
+.moving-img {
+  width: 400px;
+  height: 500px;
+}
+.like {
+  background-color: #00ff0000;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-top: 4px;
+}
+.box2 {
+  margin-top: 20px;
+  width: 800px;
+  height: 130px;
+  background-color: #616161;
+  border-radius: 30px;
+}
+
+.box2-content {
+  background-color: #00ff0000;
+  margin-left: 20px;
+}
+.likecomment {
+  background-color: #00ff0000;
+  display: flex;
+}
+
+.likebox {
+  background-color: #00ff0000;
+  width: 80px;
+  height: 30px;
+  border: 1px #ffffff solid;
+  border-radius: 40px;
+  font-size: 20px;
+}
+
+.commentbox {
+  background-color: #00ff0000;
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  border: 1px #ffffff solid;
+  border-radius: 40px;
+  font-size: 20px;
+}
+
+.mega {
+  width: 500px;
+  height: 400px;
+}
+
+.box3 {
+  margin-top: 20px;
+  width: 800px;
+  height: 570px;
+  background-color: #616161;
+  border-radius: 30px;
+}
+
+.box3-content {
+  background-color: #00ff0000;
+  margin-left: 20px;
+}

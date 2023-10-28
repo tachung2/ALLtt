@@ -1,0 +1,11 @@
+.search-results {
+  margin: 0 40px 40px 40px;
+}
+.search-results > h2 {
+  margin-bottom: 16px;
+}
+.search-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
