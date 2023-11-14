@@ -1,7 +1,5 @@
 package com.tachung.server.DTO;
 
-import com.tachung.server.domain.user.User;
-
 public class AuthenticationResponse {
     private String token;
     private UserInfo userInfo;

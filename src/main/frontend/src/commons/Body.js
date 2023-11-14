@@ -6,8 +6,8 @@ import { useState } from "react";
 export default function Body() {
   const [flatforms] = useState([
     {
-      id: "Netflex",
-      text: "netflex",
+      id: "Netflix",
+      text: "netflix",
     },
     {
       id: "Watcha",

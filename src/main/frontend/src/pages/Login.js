@@ -29,7 +29,7 @@ function Login() {
             const data = await response.json();
             if (response.ok) {
                 // 로그인 성공 처리 (예: 토큰 저장, 리다이렉트 등)
-                localStorage.setItem('token', data.token); // JWT 토큰 로컬 스토리지에 저장
+                localStorage.setItem('token', data.accessToken); // JWT 토큰 로컬 스토리지에 저장
                 setIsLoggedIn(true); // 인증 상태 변경
                 navigate('/'); // 메인 페이지로 리다이렉트
             } else {

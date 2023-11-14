@@ -6,13 +6,13 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
 import "swiper/css/navigation";
 
 import "../App.css";
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation } from "swiper";
 
 import { ReactComponent as More } from "../assets/more.svg";
 

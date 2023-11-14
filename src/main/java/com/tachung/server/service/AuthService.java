@@ -1,7 +1,7 @@
 package com.tachung.server.service;
 
-import com.tachung.server.domain.user.User;
-import com.tachung.server.domain.user.UserRepository;
+import com.tachung.server.Entity.User;
+import com.tachung.server.Entity.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

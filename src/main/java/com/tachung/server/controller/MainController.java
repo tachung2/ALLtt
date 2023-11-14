@@ -1,19 +1,22 @@
 package com.tachung.server.controller;
 
 import com.tachung.server.DTO.*;
-import com.tachung.server.domain.user.User;
-import com.tachung.server.domain.user.UserRepository;
+import com.tachung.server.Entity.User;
+import com.tachung.server.Entity.UserRepository;
 import com.tachung.server.service.*;
 import com.tachung.server.util.JwtUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,7 +25,7 @@ import java.util.Optional;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MainController {
-
+    private static final Logger logger = LoggerFactory.getLogger(MainController.class);
     private final ContentsService contentsService;
     private final UserService userService;
 
@@ -33,17 +36,15 @@ public class MainController {
 
     private final SearchService searchService;
 
-    private final SeleniumService seleniumService;
 
     @Autowired
-    public MainController(ContentsService contentsService, UserService userService, UserRepository userRepository, JwtUtil jwtUtil, DetailService detailService, SearchService searchService, SeleniumService seleniumService) {
+    public MainController(ContentsService contentsService, UserService userService, UserRepository userRepository, JwtUtil jwtUtil, DetailService detailService, SearchService searchService) {
         this.contentsService = contentsService;
         this.userService = userService;
         this.userRepository = userRepository;
         this.jwtUtil = jwtUtil;
         this.detailService = detailService;
         this.searchService = searchService;
-        this.seleniumService = seleniumService;
     }
 
     // 회원가입
@@ -64,6 +65,7 @@ public class MainController {
             // 이메일과 비밀번호가 일치하는 경우
             String accessToken = jwtUtil.generateToken(user.getEmail());
             String refreshToken = jwtUtil.generateRefreshToken(user.getEmail());
+            logger.info(accessToken);
             UserInfo userInfo = new UserInfo(existingUser.get().getName(), existingUser.get().getEmail());
             return ResponseEntity.ok(new AuthenticationResponse(accessToken, refreshToken, userInfo));  // 200 상태 코드 반환
         }
@@ -102,8 +104,26 @@ public class MainController {
         private String refreshToken;
     }
 
+    @GetMapping("/user-info")
+    public ResponseEntity<?> getUserInfo(@RequestHeader("Authorization") String token) {
+        if (token != null && token.startsWith("Bearer ")) {
+            token = token.substring(7);
+            if (jwtUtil.validateToken(token)) {
+                String email = jwtUtil.extractEmail(token);
+                User user = userService.getUserByEmail(email);
+                if (user != null) {
+                    // 사용자 정보를 Map 혹은 DTO 객체를 사용하여 JSON 형식으로 반환
+                    Map<String, String> userInfo = new HashMap<>();
+                    userInfo.put("userName", user.getName());
+                    return ResponseEntity.ok(userInfo);
+                }
+            }
+        }
+        return ResponseEntity.badRequest().body("Invalid Token or User not found");
+    }
+
     // 넷플릭스 정보 상위 5개 가져오기
-    @GetMapping("/netflex")
+    @GetMapping("/netflix")
     public List<MovieDto> getNetflexTop5() {
         return contentsService.getNetflixTop5();
     }
@@ -161,11 +181,6 @@ public class MainController {
     @GetMapping("/person")
     public List<Person> searchPersons(@RequestParam String query) {
         return searchService.searchPersons(query);
-    }
-
-    @PostMapping("/netflix/subscriptionDate")
-    public String getSubscriptionDate(@RequestBody UserRequest userRequest) {
-        return seleniumService.getSubscriptionDate(userRequest.getEmail(), userRequest.getPassword());
     }
 
 }

@@ -4,6 +4,8 @@ import com.tachung.server.DTO.MovieDto;
 import com.tachung.server.DTO.Person;
 import com.tachung.server.DTO.PersonListResponse;
 import com.tachung.server.DTO.TvShowListResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class SearchService {
@@ -21,9 +24,10 @@ public class SearchService {
     private final RestTemplate restTemplate = new RestTemplate();
 
     public List<MovieDto> searchTvShows(String query) {
-        String url = API_URL + "/search/tv?api_key=" + API_KEY + "&query=" + URLEncoder.encode(query, StandardCharsets.UTF_8) + "&language=ko-KR";
+        String url = API_URL + "/search/tv?api_key=" + API_KEY + "&query=" + query + "&language=ko-KR";
         ResponseEntity<TvShowListResponse> response = restTemplate.getForEntity(url, TvShowListResponse.class);
         return response.getBody().getResults();
+
     }
 
     public List<Person> searchPersons(String query) {

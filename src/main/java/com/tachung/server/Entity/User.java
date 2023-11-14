@@ -1,4 +1,4 @@
-package com.tachung.server.domain.user;
+package com.tachung.server.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

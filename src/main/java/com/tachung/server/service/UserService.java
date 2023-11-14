@@ -1,8 +1,8 @@
 package com.tachung.server.service;
 
 
-import com.tachung.server.domain.user.User;
-import com.tachung.server.domain.user.UserRepository;
+import com.tachung.server.Entity.User;
+import com.tachung.server.Entity.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,5 +23,8 @@ public class UserService {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
         return userRepository.save(user);
+    }
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
     }
 }
