@@ -1,5 +1,7 @@
-1. 팀원현황
+
 ---
+1. 팀원현황
+
     성제민 Full-stack developer
 
     신유정 Front-end developer
