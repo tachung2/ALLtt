@@ -18,7 +18,7 @@ function Login() {
         };
 
         try {
-            const response = await fetch('http://belleravi.co.kr/api/login', {
+            const response = await fetch('https://belleravi.co.kr/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

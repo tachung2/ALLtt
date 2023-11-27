@@ -19,7 +19,7 @@ function Signup() {
     };
 
     try {
-      const response = await fetch('http://belleravi.co.kr/api/signup', {
+      const response = await fetch('https://belleravi.co.kr/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

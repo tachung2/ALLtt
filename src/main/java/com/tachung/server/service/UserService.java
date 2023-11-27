@@ -2,7 +2,7 @@ package com.tachung.server.service;
 
 
 import com.tachung.server.Entity.User;
-import com.tachung.server.Entity.UserRepository;
+import com.tachung.server.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

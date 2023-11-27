@@ -11,7 +11,7 @@ function SearchResults() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiUrl = `http://belleravi.co.kr/api/tv?query=${query}`;
+    const apiUrl = `https://belleravi.co.kr/api/tv?query=${query}`;
 
     fetch(apiUrl)
       .then((response) => {

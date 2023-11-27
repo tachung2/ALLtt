@@ -3,6 +3,8 @@ package com.tachung.server.DTO;
 
 import lombok.Data;
 
+
+// 유저 정보 DTO
 @Data
 public class UserInfo {
     private String name;

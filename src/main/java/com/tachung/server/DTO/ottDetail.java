@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+// 드라마 상세 정보 DTO
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

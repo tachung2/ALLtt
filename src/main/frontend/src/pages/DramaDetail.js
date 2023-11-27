@@ -8,8 +8,8 @@ function DramaDetail() {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    const dramaApiUrl = `http://belleravi.co.kr/api/detail/${id}`;
-    const videoApiUrl = `http://belleravi.co.kr/api/detail/videos/${id}`;
+    const dramaApiUrl = `https://belleravi.co.kr/api/detail/${id}`;
+    const videoApiUrl = `https://belleravi.co.kr/api/detail/videos/${id}`;
 
     const fetchDramaDetail = async () => {
       try {

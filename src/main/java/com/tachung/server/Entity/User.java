@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+// 유저 정보 Entity
 @Data
 @Entity
 public class User {

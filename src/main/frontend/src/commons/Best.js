@@ -21,7 +21,7 @@ function Best({ flatform, flatformname }) {
 
   useEffect(() => {
     // const apiUrl = "http://belleravi.co.kr/api/netflex";
-    const apiUrl = "http://belleravi.co.kr/api/" + flatform;
+    const apiUrl = "https://belleravi.co.kr/api/" + flatform;
 
     const fetchDramas = async () => {
       try {

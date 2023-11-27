@@ -142,3 +142,7 @@
   cursor: pointer;
 }
 
+.flatform-day-title {
+  position: absolute;
+  margin: 0 auto;
+}

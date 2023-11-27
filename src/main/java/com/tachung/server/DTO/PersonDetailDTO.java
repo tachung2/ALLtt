@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 
+// 드라마 출연진 정보 DTO
 @Data
 public class PersonDetailDTO {
     private List<Person> cast;

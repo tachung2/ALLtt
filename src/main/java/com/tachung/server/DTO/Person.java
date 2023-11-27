@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// 드라마 출연진 정보 DTO
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

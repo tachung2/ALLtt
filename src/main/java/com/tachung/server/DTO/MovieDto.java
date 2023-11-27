@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+//  드라마 정보 DTO
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

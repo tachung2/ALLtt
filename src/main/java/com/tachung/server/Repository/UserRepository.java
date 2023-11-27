@@ -1,5 +1,6 @@
-package com.tachung.server.Entity;
+package com.tachung.server.Repository;
 
+import com.tachung.server.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
